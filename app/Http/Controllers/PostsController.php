@@ -33,16 +33,22 @@ class PostsController extends Controller
         // ->select('id', 'title', 'body', 'created_at')
         // ->get();
 
-        $posts = DB::table("posts")->insert([
-            'title' => 'Post 2',
-            'body' => 'This is body post 2',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+        // $posts = DB::table("posts")->insert([
+        //     'title' => 'Post 2',
+        //     'body' => 'This is body post 2',
+        //     'created_at' => now(),
+        //     'updated_at' => now(),
+        // ]);
+        // $posts = DB::table("posts")->where('id', '=', 1)->update([
+        //     'title' => 'Post 1 update',
+        //     'body' => 'This is body post 1 update',
+        // ]);
+        $posts = DB::table("posts")->where('id', '=', 1)->delete();
+
         dd($posts);
 
-        // return view('posts.index', [
-        //     'title' => 'Posts',
-        // ]);
+            // return view('posts.index', [
+            //     'title' => 'Posts',
+            // ]);
     }
 }

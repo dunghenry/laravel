@@ -110,3 +110,23 @@ SELECT * FROM table_name;
 ```js
 exit;
 ```
+### DROP TABLE MySQL
+```js
+DROP TABLE IF EXISTS food; 
+```
+
+
+### Create rule validate
+```js
+php artisan make:rule Uppercase
+```
+
+### Create request validate
+```js
+php artisan make:request CreateValidationRequest
+```
+
+### Add column
+```js
+php artisan make:migration add_image_to_foods
+```
